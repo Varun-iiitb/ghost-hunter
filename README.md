@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 👻 Ghost Hunter: Dark Vessel Detection System
 
 ![Ghost Hunter](https://img.shields.io/badge/Status-Active-success)
@@ -124,3 +125,6 @@ npm run dev
 ---
 
 **Developed for HackXios 2025**
+=======
+# ghost-hunter
+>>>>>>> 6f93fad9092af09c19bd299c21b6bf15f9e66b9d
