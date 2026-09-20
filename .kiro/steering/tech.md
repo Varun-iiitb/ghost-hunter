@@ -42,7 +42,7 @@
 ### Project Structure
 - Modular architecture with separate components
 - Pipeline-based execution model
-- Hackathon-derived codebase (`hackxois/` subdirectory)
+- Core detection codebase (`hackxois/` subdirectory)
 
 ## Common Commands
 

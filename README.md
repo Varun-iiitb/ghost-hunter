@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 👻 Ghost Hunter: Dark Vessel Detection System
 
 ![Ghost Hunter](https://img.shields.io/badge/Status-Active-success)
@@ -9,37 +8,20 @@
 
 ---
 
+## 📖 Overview
+
+Ghost Hunter is an end-to-end maritime intelligence system that tackles illegal, unreported, and unregulated (IUU) fishing using satellite radar, computer vision, and behavioral analysis.
+
+It goes beyond simple vessel detection by fusing Sentinel-1 SAR imagery, physics-based ship detection, CNN-based visual validation, AIS silence verification, and context-aware risk scoring to identify dark vessels operating inside protected marine regions. By combining spatial legality (MPAs), motion cues, fleet-level context, and explainable risk fusion, the system produces actionable, analyst-ready intelligence rather than raw alerts — enabling faster, more informed maritime enforcement decisions.
+
+The pipeline is structured as modular, independently executable stages covering satellite ingestion, model execution, and risk analysis. This keeps the system scalable, reproducible, and easy to extend — from data ingestion all the way to final threat assessment.
+
+---
+
 ## 🎥 Demo
 
-- 🎥 **Open Innovation Track Demo:** https://youtu.be/TovBASrcox0  
-- 🎥 **AWS / Kiro Track Demo:** https://youtu.be/5ugwDowB4mk
----
-
-## 📚 Tracks & Documentation
-
-### 🏆 Open Innovation Track
-📄 **Detailed Architecture, Problem Statement & Technical Design**  
-👉 *(Link to Google Doc – (https://docs.google.com/document/d/1F8qbUlpY5mmD9qXqkOsk9WE-dmcd-b-PoYVR8xLBuTM/edit?usp=sharing))*
-We present an end-to-end maritime intelligence system that tackles illegal, unreported, and unregulated (IUU) fishing using satellite radar, computer vision, and behavioral analysis.
-Our approach goes beyond simple vessel detection by fusing Sentinel-1 SAR imagery, physics-based ship detection, CNN-based visual validation, AIS silence verification, and context-aware risk scoring to identify dark vessels operating inside protected marine regions. By combining spatial legality (MPAs), motion cues, fleet-level context, and explainable risk fusion, the system produces actionable, analyst-ready intelligence rather than raw alerts — enabling faster, more informed maritime enforcement decisions.
-
-### ☁️ AWS Track
-
-📄 **AWS/Kiro Architecture, Execution Flow & Design Rationale**  
-👉 *(Link to Google Doc – https://docs.google.com/document/d/1zZNevPwG6epvq0aSeYlOOPLbUZ6hpRcabT4RDZEJY1E/edit?usp=sharing)*
-Our system leverages Kiro as the central orchestration and execution layer for the pipeline, enabling seamless coordination of satellite ingestion, model execution, and risk analysis workflows. Kiro is used to manage task scheduling, modular pipeline stages, and controlled execution of compute-intensive components, allowing the system to remain scalable, reproducible, and easy to extend. By structuring the entire intelligence flow as Kiro-managed tasks, we demonstrate how Kiro can be effectively used to operationalize complex AI pipelines — from data ingestion to final threat assessment — with clarity and reliability.
-
----
-
-## ⚠️ Deployment & Architecture Note
-
-**Why is this not hosted on Vercel/Render?**
-
-Ghost Hunter deals with **high-resolution Synthetic Aperture Radar (SAR) satellite imagery** and runs **complex CNN inference** locally. 
-1.  **Computational Intensity**: Processing 250MB+ satellite product files requires significant RAM and CPU power, exceeding the limits of standard free-tier PaaS functionality.
-2.  **Model Size**: The PyTorch CNN models and geospatial libraries (GDAL/Rasterio) create a large build slug that is best managed in a containerized environment (Docker/Kubernetes) or a dedicated high-performance instance.
-
-**We provide a seamless local setup script to replicate the full production environment on your machine.**
+- 🎥 **System walkthrough:** https://youtu.be/TovBASrcox0
+- 🎥 **Pipeline & architecture walkthrough:** https://youtu.be/5ugwDowB4mk
 
 ---
 
@@ -50,6 +32,18 @@ Ghost Hunter deals with **high-resolution Synthetic Aperture Radar (SAR) satelli
 -   **Risk Assessment**: Assigns risk scores based on behavior, location (e.g., inside MPAs), and history.
 -   **GenAI Intelligence**: Generates automated intelligence reports using Gemini 1.5 Pro/Flash.
 -   **Interactive Dashboard**: A modern Next.js frontend for visualizing detection results on a map.
+
+---
+
+## ⚠️ Deployment & Architecture Note
+
+**Why is this not hosted on Vercel/Render?**
+
+Ghost Hunter deals with **high-resolution Synthetic Aperture Radar (SAR) satellite imagery** and runs **complex CNN inference** locally.
+1.  **Computational Intensity**: Processing 250MB+ satellite product files requires significant RAM and CPU power, exceeding the limits of standard free-tier PaaS functionality.
+2.  **Model Size**: The PyTorch CNN models and geospatial libraries (GDAL/Rasterio) create a large build slug that is best managed in a containerized environment (Docker/Kubernetes) or a dedicated high-performance instance.
+
+**We provide a seamless local setup script to replicate the full production environment on your machine.**
 
 ---
 
@@ -72,8 +66,8 @@ We provide automated scripts to set up the environment, install dependencies, an
 1.  Open your terminal.
 2.  Clone the repository:
     ```bash
-    git clone https://github.com/sahiti3636/HackXios-Ghost-Hunter.git
-    cd HackXios-Ghost-Hunter
+    git clone https://github.com/Varun-iiitb/ghost-hunter.git
+    cd ghost-hunter
     ```
 3.  Run the setup script:
     ```bash
@@ -86,8 +80,8 @@ We provide automated scripts to set up the environment, install dependencies, an
 1.  Open PowerShell.
 2.  Clone the repository:
     ```powershell
-    git clone https://github.com/sahiti3636/HackXios-Ghost-Hunter.git
-    cd HackXios-Ghost-Hunter
+    git clone https://github.com/Varun-iiitb/ghost-hunter.git
+    cd ghost-hunter
     ```
 3.  Run the setup script:
     ```powershell
@@ -118,13 +112,4 @@ npm run dev
 ## 🤝 Contributors
 
 1. [Varun E](https://github.com/varun-iiitb)
-2. [Potini Sahiti](https://github.com/sahiti3636)
-3. [Navya Sharma](https://github.com/navya2208)
-4. [Shivansh Shah](https://github.com/shivansh-shah)
-
----
-
-**Developed for HackXios 2025**
-=======
-# ghost-hunter
->>>>>>> 6f93fad9092af09c19bd299c21b6bf15f9e66b9d
+2. [Shivansh Shah](https://github.com/shivansh-shah)

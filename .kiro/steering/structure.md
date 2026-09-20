@@ -45,7 +45,7 @@ cnn_dataset/
 
 ## Hackxois Submodule
 
-The `hackxois/` directory contains the original hackathon codebase that forms the foundation:
+The `hackxois/` directory contains the core detection codebase that forms the foundation:
 
 ```
 hackxois/

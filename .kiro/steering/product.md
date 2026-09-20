@@ -19,6 +19,5 @@ Ghost Hunter is a comprehensive marine vessel detection and analysis system that
 - Illegal fishing detection and enforcement
 - Maritime security and surveillance
 - Research and environmental protection
-- Hackathon demonstrations and proof-of-concept development
 
 The system processes satellite data through a complete pipeline from raw SAR imagery to actionable intelligence reports with risk scores and behavioral analysis.
